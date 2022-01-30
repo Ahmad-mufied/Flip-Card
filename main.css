@@ -18,12 +18,13 @@ body {
 
 .card {
   margin: 100px auto; 0;
-  width: 400px;
-  height: 600px;
+  width: 350px;
+  height: 500px;
   perspective: 950px;
 }
 
 .card__inner {
+
   width: 100%;
   height: 100%;
   transition: transform 1s;
@@ -63,9 +64,6 @@ body {
   justify-content: center;
 }
 
-.to_translate {
-
-}
 
 .card__face--back {
   padding: 10px 20px;
@@ -105,7 +103,7 @@ body {
 
 .card__header_back h2 {
   color: #FFF;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -113,9 +111,9 @@ body {
 
 .card__header_front h2  {
   background: #F3F3F3;
-  padding: 20px;
+  padding: 10px;
   color: var(--dark);
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -125,18 +123,18 @@ body {
 .card__body {
   color: var(--dark);
   padding: 50px 30px 30px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   margin-top: 30px;
 }
 
 .card__face--back .card__body p {
   align-items: center;
-  margin-top: 50px;
+  margin-top: 45px;
   padding: 20px;
   color: var(--dark);
   background-color: #8ca0ff;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.5;
 
   color: #fff;
