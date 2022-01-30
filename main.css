@@ -1,6 +1,6 @@
 :root {
-  --primary: #FFCE00;
-  --secondary: #FE4880;
+  --primary: #9AD0EC;
+  --secondary: #4FBDBA;
   --dark: #212121;
   --light: #F3F3F3;
 }
@@ -48,18 +48,31 @@ body {
 }
 
 .card__face--front {
-  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25),
+  inset 2px 2px 5px rgba(0, 0, 0, 0.35),
+  inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  background: #9AD0EC;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card__face--front h2 {
-  color: #FFF;
-  font-size: 32px;
+.to_translate {
+
 }
 
 .card__face--back {
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+  inset 2px 2px 5px rgba(0, 0, 0, 0.35),
+  inset -3px -3px 5px rgba(0, 0, 0, 0.5);
   background-color: var(--light);
   transform: rotateY(180deg);
 }
@@ -69,12 +82,13 @@ body {
   height: 100%;
 }
 
-.card__header {
+.card__header_back {
   position: relative;
-  padding: 30px 30px 40px;
+  padding: 30px 10px 40px;
 }
 
-.card__header::after {
+
+.card__face--back .card__header_back::after {
   content: '';
   display: block;
   position: absolute;
@@ -83,42 +97,71 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
-  border-radius: 0 0 50% 0;
-  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  border-radius: 0 0 45% 45%;
+  background-image: linear-gradient(to top right, var(--primary) 10%, var(--secondary) 115%);
 }
 
-.pp {
-  display: block;
-  width: 128px;
-  height: 128px;
-  margin: 0 auto 30px;
-  border-radius: 50%;
-  background-color: #FFF;
-  border: 5px solid #FFF;
-  object-fit: cover;
-}
 
-.card__header h2 {
+
+.card__header_back h2 {
   color: #FFF;
-  font-size: 32px;
+  font-size: 23px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
 }
 
-.card__body {
-  padding: 30px;
+.card__header_front h2  {
+  background: #F3F3F3;
+  padding: 20px;
+  color: var(--dark);
+  font-size: 23px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
 }
+
 
 .card__body {
   color: var(--dark);
+  padding: 50px 30px 30px;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-top: 30px;
 }
 
-.card__body p {
+.card__face--back .card__body p {
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
   color: var(--dark);
-  font-size: 18px;
+  background-color: #8ca0ff;
+  font-size: 25px;
   line-height: 1.5;
+
+  color: #fff;
+  font-size: 1.15em;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+  inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+   -1px -1px 5px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  background: #4FBDBA;
+}
+
+.card__face--front .card__body p {
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  color: var(--dark);
+  background-color: #8ca0ff;
+  font-size: 25px;
+  line-height: 1.5;
+
+  color: #fff;
+  font-size: 1.15em;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+  inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+   -1px -1px 5px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  background: #7C99AC;
 }
